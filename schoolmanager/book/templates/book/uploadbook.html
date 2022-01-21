@@ -1,0 +1,21 @@
+{% extends 'book/layout.html'  %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col col-lg-8 col-md-10">
+            <div class="card">
+                <div class="card-body">
+                    <h1> Upload </h1>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <input type="file" name="document">
+                        <button type="submit" name="submit"> Upload Book </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

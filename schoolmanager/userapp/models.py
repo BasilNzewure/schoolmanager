@@ -32,6 +32,7 @@ class Courses(models.Model):
         )
 
     faculty = (
+            
         ('Basil Nzewure', 'Mr Basil Nzewure'), 
         ('Stanley Surname', 'Stanley Surname'), 
         ('Jude Nzewure', 'Jude Nzewure'), 
@@ -47,7 +48,7 @@ class Courses(models.Model):
 
     def __str__(self):
         return f"{self.id}, {self.course_name} For {self.duration} By {self.faculty}"
-
+                                                                                                                                                                                  
 
 class BookCourse(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
