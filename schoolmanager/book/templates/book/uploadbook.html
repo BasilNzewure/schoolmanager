@@ -13,9 +13,20 @@
                         <input type="file" name="document">
                         <button type="submit" name="submit"> Upload Book </button>
                     </form>
+
+                    {% if url %}
+                    <p>Uploaded File: <a href="{{ url }}"> {{ url }}</a></p>
+                    {% endif %}
+                    
                 </div>
             </div>
         </div>
     </div>
+   
 </div>
+
+
+
 {% endblock %}
+
+
